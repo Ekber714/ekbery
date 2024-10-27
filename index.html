@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekber'in Kişisel Sayfası</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://example.com/dunya-gorseli.jpg'); /* Dünya görseli URL'sini buraya ekleyin */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow-y: scroll;
+            cursor: grab;
+            height: 100vh;
+        }
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background-color: white;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: fall 5s linear infinite;
+        }
+        @keyframes fall {
+            0% { transform: translateY(-100vh); }
+            100% { transform: translateY(100vh); }
+        }
+        header {
+            background: rgba(0, 123, 255, 0.9);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+            font-size: 1.2em;
+        }
+        nav a:hover {
+            color: #ffc107;
+        }
+        section {
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            color: #333;
+            position: relative;
+            z-index: 1;
+        }
+        h2 {
+            font-size: 2em;
+            margin-top: 0;
+            color: #007BFF;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        .name-container {
+            background: linear-gradient(135deg, #FFC107, #FF5733);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 300px;
+            text-align: center;
+        }
+        .name {
+            font-size: 2em;
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            padding: 10px;
+            background: rgba(0, 123, 255, 0.9);
+            color: white;
+        }
+        .project {
+            border: 2px solid #007BFF;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+            background: rgba(255, 255, 255, 0.8);
+            transition: transform 0.2s;
+        }
+        .project:hover {
+            transform: scale(1.02);
+        }
+        .button, .whatsapp-button, .instagram-button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+            margin-top: 10px;
+            font-size: 1.1em;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .button:hover, .whatsapp-button:hover {
+            background-color: #218838;
+        }
+        .instagram-button {
+            background-color: #E1306C;
+        }
+        .instagram-button:hover {
+            background-color: #C13584;
+        }
+        .scale-button {
+            transition: transform 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div id="stars-container"></div>
+    <header>
+        <h1>Hoş Geldiniz!</h1>
+        <nav>
+            <a href="#hakkimda">Hakkımda</a>
+            <a href="#iletişim">İletişim</a>
+            <a href="#projeler">Projeler</a>
+            <a href="#sevgi">Sevgi</a>
+        </nav>
+    </header>
+    <div class="name-container">
+        <div class="name">Adım Ekber</div>
+    </div>
+    <section id="hakkimda">
+        <h2>Hakkımda</h2>
+        <p>Merhaba! Ben Ekber, web geliştirme konusunda tutkulu bir bireyim. HTML, CSS ve JavaScript ile projeler geliştiriyorum.</p>
+        <p>Teknolojiye olan ilgim, beni sürekli olarak yeni şeyler öğrenmeye teşvik ediyor.</p>
+    </section>
+    <section id="iletişim">
+        <h2>İletişim</h2>
+        <p>Bana telefonla ulaşabilirsiniz: <strong>0536 880 5762</strong></p>
+        <button class="button scale-button" onclick="alert('E-posta gönderme formu açılacak!')">E-posta Gönder</button>
+        <br><br>
+        <a href="https://www.instagram.com/saitkeen" target="_blank">
+            <button class="instagram-button scale-button">Instagram Hesabım</button>
+        </a>
+        <br><br>
+        <a href="https://api.whatsapp.com/send?phone=905368805762" target="_blank">
+            <button class="whatsapp-button scale-button">WhatsApp ile İletişime Geç</button>
+        </a>
+    </section>
+    <section id="projeler">
+        <h2>Projelerim</h2>
+        <div class="project">
+            <h3>Proje 1: Web Sitesi Tasarımı</h3>
+            <p>Modern ve kullanıcı dostu bir web sitesi tasarladım.</p>
+        </div>
+        <div class="project">
+            <h3>Proje 2: Basit Bir Oyun</h3>
+            <p>JavaScript ile geliştirilmiş eğlenceli bir oyun.</p>
+        </div>
+        <div class="project">
+            <h3>Proje 3: Kişisel Blog</h3>
+            <p>Düşüncelerimi paylaştığım bir blog platformu oluşturdum.</p>
+        </div>
+    </section>
+    <section id="sevgi">
+        <h2>Sevgiyle Ravza</h2>
+        <p>Ravza, seninle hayatım daha güzel! ❤️</p>
+        <div style="font-size: 2em; text-align: center;">
+            R A V Z A
+        </div>
+        <div style="text-align: center; font-size: 1.5em;">
+            * Senin gülüşün, yıldızları parlatıyor. <br>
+            * Gözlerin, denizin derinliği gibi. <br>
+            * Seninle her anım bir hazine! 💖
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Ekber. Tüm hakları saklıdır.</p>
+    </footer>
+    <script>
+        // Yıldızları oluştur
+        const starsContainer = document.getElementById('stars-container');
+        const numberOfStars = 100; // Yıldız sayısı
+        for (let i = 0; i < numberOfStars; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            star.style.left = Math.random() * 100 + 'vw'; // Yıldızın yatay konumu
+            star.style.animationDuration = Math.random() * 3 + 2 + 's'; // Farklı hızlar için
+            star.style.opacity = Math.random(); // Farklı opasite
+            starsContainer.appendChild(star);
+        }
+
+        // Sürükleme işlevselliği
+        let isDragging = false;
+        let startY;
+        let scrollTop;
+        document.body.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            startY = e.pageY - window.scrollY; // Başlangıç Y konumu
+            scrollTop = window.scrollY; // Mevcut kaydırma pozisyonu
+            document.body.style.cursor = 'grabbing'; // Sürükleme işareti
+        });
+        document.body.addEventListener('mouseup', () => {
+            isDragging = false;
+            document.body.style.cursor = 'grab'; // Normal işaret
+        });
+        document.body.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            e.preventDefault(); // Varsayılan davranışı engelle
+            const y = e.pageY - startY;
+            window.scrollTo(0, scrollTop - y); // Sayfayı kaydır
+        });
+        // Fare tekerleği ile kaydırma
+        document.body.addEventListener('wheel', (e) => {
+            e.preventDefault(); // Varsayılan kaydırmayı engelle
+            window.scrollBy(0, e.deltaY); // Y ekseninde kaydır
+        }, { passive: false });
+
+        // Butonların yakınlığını algılama
+        const buttons = document.querySelectorAll('.scale-button');
+        buttons.forEach(button => {
+            button.addEventListener('mouseover', () => {
+                button.style.transform = 'scale(1.1)';
+            });
+            button.addEventListener('mouseout', () => {
+                button.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
